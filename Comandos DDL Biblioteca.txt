@@ -1,0 +1,47 @@
+
+CREATE TABLE bibliotecario (
+cep varchar(15),
+uf varchar(2),
+cidade varchar(100),
+bairro varchar(100),
+complemento varchar(10),
+num varchar(10),
+logradouro varchar(50),
+codFuncionario int PRIMARY KEY,
+dataNascimento date,
+email varchar(255),
+rg varchar(15),
+cpf varchar(15),
+telefone varchar(10),
+nome varchar(255)
+);
+
+CREATE TABLE emprestimo_devolucao (
+data_emprestimo date,
+data_devolucao date,
+codEmprestimo int PRIMARY KEY,
+codlivro int,
+codFuncionario int,
+ra int,
+FOREIGN KEY(codFuncionario) REFERENCES bibliotecario (codFuncionario)
+);
+
+CREATE TABLE livro (
+codlivro int PRIMARY KEY,
+titulo varchar(255),
+autor varchar(255),
+genero varchar(50),
+editora varchar(255)
+);
+
+CREATE TABLE cliente (
+ra int PRIMARY KEY,
+telefone varshar(15),
+turma varchar(15),
+dataNascimento date,
+email varchar(255),
+nome varchar(255)
+);
+
+ALTER TABLE emprestimo_devolucao ADD FOREIGN KEY(codlivro) REFERENCES livro (codlivro);
+ALTER TABLE emprestimo_devolucao ADD FOREIGN KEY(ra) REFERENCES cliente (ra);

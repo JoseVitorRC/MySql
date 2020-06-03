@@ -1,0 +1,31 @@
+insert into livro (titulo ,autor ,editora ,genero) values
+
+('Harry Potter and the Goblet of Fire','J.K Rowling','rocco','fantasia'),
+('Sherlock Holmes Um Estudo Em Vermelho','Sir Arthur Conan Doyle','Saraiva','Suspense'),
+('A Menina que Roubava Livros','Markus Zusak','Saraiva','Romance'),
+('O Pequeno Principe','Antoine De Saint-Exupéry','Melhoramentos','Literatura infantil'),
+('A Garota do Lago','Charlie Donlea','Saraiva','Suspense');
+
+insert into cliente (nome ,email ,turma ,telfixo) values
+
+('Diogo Lopes','Diogol31@gmail.com','1C','40028922'),
+('Felipe Pedro','felipedro@gmail.com','1A','49039457'),
+('Rian Holanda','rianastronomo11@gmail.com','1C','48908584'),
+('Henrique Ferreira','henriquetombarao@gmail.com','1F','40793218'),
+('Daniela Cavalcante','cavalcantedani14@gmail.com','1B','40695786');
+
+insert into bibliotecario (nome ,cidade ,email ,cpf ,dataNascimento) values
+
+('Carlos Eduardo','Maua','carlosedu26@gmail.com','111.222.333-44','24-12-1987'),
+('Maicon Silva','Santos','maiconsil213@gmail.com','999.888.777-66','15-05-1990'),
+('Daniel Rodrigues','Ribeirao Pires','danrodrigues32@gmail.com','739.235.755-27','14-10-1997'),
+('Cezar Cohen','Sao Caetano','cezinhacohen01101001@gmail.com','001.100.010-00','01-10-1994'),
+('Roberta Cavalcante','Maua','robertacava292@gmail.com','280.283.059-47','28-07-1996');
+
+insert into emprestimo_devolucao (codFuncionario ,codlivro ,data_emprestimo ,data_devolucao ,ra) values
+
+('5','1','10-03-2020','26-10-2020','4'),
+('2','5','28-01-2020','08-07-2020','1'),
+('3','2','09-04-2020','29-11-2020','8'),
+('4','3','30-02-2020','14-09-2020','6'),
+('3','4','17-05-2020','11-10-2020','2');
